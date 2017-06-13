@@ -1,0 +1,10 @@
+version: "3"
+services:
+    app-postgres:
+        image: postgres:latest
+        environment:
+            - POSTGRES_PASSWORD=sql
+        ports:
+            - "5000:5432"
+    app-golang:
+        build: site
